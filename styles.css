@@ -1,6 +1,11 @@
 @font-face {
     font-family: 'DOM';
-    src: url(../AW_Portfolio/nihonium113/Nihonium113-Console.ttf) format('truetype');   
+    src: url(../AW_Portfolio/Fonts/nihonium113/Nihonium113-Console.ttf) format('truetype');   
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url(../AW_Portfolio/Fonts/Fira_Code/FiraCode-VariableFont_wght.ttf) format('truetype');
 }
 
 /* 
@@ -17,11 +22,6 @@ Colors:
 
 body {
     background-color:#F0CC9A;
-    font-family: 'DOM', monospace;
-}
-
-section {
-    
 }
 
 /* Boot overlay */
@@ -32,11 +32,29 @@ section {
     width: 100%;
     height: 100%;
     background: black;
-    color: #00ff00;
+    color: #FFFFFF;
     padding: 1rem;
     box-sizing: border-box;
-    white-space: pre-line; /* keep line breaks */
-    z-index: 9999; /* stay above site */
+    white-space: pre-wrap; /* preserve line breaks */
+    z-index: 9999; /* keep above site */
+    font-family: 'DOM', monospace;
+  }
+
+  #console-text {
+    min-height: 200px;
+  }
+
+  /* Blinking cursor */
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: #FFFFFF;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
   }
 
   #enter-text {
@@ -44,7 +62,6 @@ section {
     display: none;
   }
 
-  /* Example main site content */
   #main-site {
-    padding: 2rem;
+    font-family: 'Arial', monospace;
   }
