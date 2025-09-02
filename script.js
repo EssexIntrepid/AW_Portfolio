@@ -23,12 +23,12 @@ const lines = [
       if (charIndex < lines[lineIndex].length) {
         consoleText.textContent += lines[lineIndex][charIndex];
         charIndex++;
-        setTimeout(typeChar, 0); // typing speed
+        setTimeout(typeChar, 35); // typing speed
       } else {
         consoleText.textContent += "\n"; // new line
         lineIndex++;
         charIndex = 0;
-        setTimeout(typeChar, 0); // pause before next line
+        setTimeout(typeChar, 200); // pause before next line
       }
     } else {
       // Done typing

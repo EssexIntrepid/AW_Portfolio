@@ -1,3 +1,4 @@
+/* all two fonts idk */
 @font-face {
     font-family: 'DOM';
     src: url(../AW_Portfolio/Fonts/nihonium113/Nihonium113-Console.ttf) format('truetype');   
@@ -21,7 +22,7 @@ Colors:
 }
 
 body {
-    background-color:#F0CC9A;
+    background-color:#F0CC9A; /* just to keep the color consistent on entire website */
 }
 
 /* Boot overlay */
@@ -35,10 +36,12 @@ body {
     color: #FFFFFF;
     padding: 1rem;
     box-sizing: border-box;
-    white-space: pre-wrap; /* preserve line breaks */
+    white-space: pre-wrap;
     z-index: 9999; /* keep above site */
     font-family: 'DOM', monospace;
   }
+
+ /* boot up console text stuff */
 
   #console-text {
     min-height: 200px;
@@ -48,6 +51,8 @@ body {
     margin-top: 1rem;
     display: none;
   } 
+
+ /* just to separate boot up from actual website */
 
   #main-site {
     font-family: 'Arial', monospace;
