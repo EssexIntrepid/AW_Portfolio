@@ -44,23 +44,10 @@ body {
     min-height: 200px;
   }
 
-  /* Blinking cursor */
-  .cursor {
-    display: inline-block;
-    width: 10px;
-    background-color: #FFFFFF;
-    margin-left: 2px;
-    animation: blink 1s step-end infinite
-  }
-
-  @keyframes blink {
-    50% { opacity: 0; }
-  }
-
   #enter-text {
     margin-top: 1rem;
     display: none;
-  }
+  } 
 
   #main-site {
     font-family: 'Arial', monospace;
