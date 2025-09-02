@@ -4,8 +4,8 @@ const lines = [
     "Starting code...",
     "Oh it broke...",
     "...",
-    "piece of sh-",
-    "oh it fixed itself",
+    "Piece of sh-",
+    "Oh it fixed itself",
     "Starting code again...",
     "System ready."
   ];
@@ -33,7 +33,7 @@ const lines = [
     } else {
       // Done typing
       enterText.style.display = "block";
-      // Wait for Enter
+      // Waiting for Enter
       document.addEventListener("keydown", function handler(e) {
         if (e.key === "Enter") {
           bootScreen.style.display = "none";
