@@ -28,7 +28,7 @@ const lines = [
         consoleText.textContent += "\n"; // new line
         lineIndex++;
         charIndex = 0;
-        setTimeout(typeChar, 200); // pause before next line
+        setTimeout(typeChar, 250); // pause before next line
       }
     } else {
       // Done typing
