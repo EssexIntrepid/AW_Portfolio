@@ -7,7 +7,8 @@ const lines = [
     "Piece of sh-",
     "Oh it fixed itself",
     "Starting code again...",
-    "System ready."
+    "System ready.",
+    "Press ENTER when ready (:"
   ];
 
   const consoleText = document.getElementById("console-text");
