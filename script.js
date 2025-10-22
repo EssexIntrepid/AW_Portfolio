@@ -24,12 +24,12 @@ const lines = [
       if (charIndex < lines[lineIndex].length) {
         consoleText.textContent += lines[lineIndex][charIndex];
         charIndex++;
-        setTimeout(typeChar, 35); // typing speed
+        setTimeout(typeChar, 1); // typing speed
       } else {
         consoleText.textContent += "\n"; // new line
         lineIndex++;
         charIndex = 0;
-        setTimeout(typeChar, 250); // pause before next line
+        setTimeout(typeChar, 2); // pause before next line
       }
     } else {
       // Done typing
@@ -45,3 +45,28 @@ const lines = [
   }
 
   typeChar();
+
+// Dark theme/Light theme things
+  const toggleBtn = document.getElementById("Toggle-Theme");
+  const body = document.body;
+
+  toggleBtn.addEventListener("click",() =>{
+    body.classList.toggle("darkmode");
+  } )
+
+  // Reveal sections on scroll
+const sections = document.querySelectorAll('.section');
+
+const revealOnScroll = () => {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < triggerBottom) {
+      section.classList.add('visible');
+    }
+  });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll(); // Run on load
